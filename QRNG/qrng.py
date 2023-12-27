@@ -1,4 +1,5 @@
 import cirq
+from matplotlib import pyplot as plt
 
 def quantum_random_number_generator(num_bits):
     # Create a quantum circuit with the given number of qubits
@@ -22,8 +23,29 @@ def quantum_random_number_generator(num_bits):
 
     return random_number
 
+def display_randomness(n):
+    generated_numbers = list()
+    
+    for i in range(n):
+        generated_numbers.append(quantum_random_number_generator(num_bits))
+    
+    plt.plot(generated_numbers)
+    plt.show()
+
+
 # Main Function
 if __name__ == "__main__":
-    num_bits = 8
-    generated_number = quantum_random_number_generator(num_bits)
-    print(f"Generated Quantum Random Number (using {num_bits} qubits): {generated_number}")
+    print("Enter the number of qubits to simulate")
+    num_bits = int(input())
+    print("Press g to generate a random number or r to display randomness")
+    x = input()
+    if x == "g":
+        generated_number = quantum_random_number_generator(num_bits)
+        print(f"Generated Quantum Random Number (using {num_bits} qubits): {generated_number}")
+    elif x == "r":
+        print("How many times do you want to run the simulation?")
+        n = int(input())
+        display_randomness(n)
+    else:
+        print("Invalid input, application terminating")
+        exit()
