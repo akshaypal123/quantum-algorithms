@@ -24,10 +24,12 @@ def quantum_random_number_generator(num_bits):
     return random_number
 
 def display_randomness(n):
-    generated_numbers = list()
+    # Initialise empty list of length n to store values
+    generated_numbers = list(range(n))
     
+    # Generate n random numbers 
     for i in range(n):
-        generated_numbers.append(quantum_random_number_generator(num_bits))
+        generated_numbers[i] = quantum_random_number_generator(num_bits)
     
     plt.plot(generated_numbers)
     plt.show()
