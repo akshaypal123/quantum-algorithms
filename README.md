@@ -27,7 +27,7 @@ Before you begin, ensure you have the following prerequisites:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/quantum-algorithms.git
+   git clone https://github.com/akshaypal123/quantum-algorithms.git
    ```
 
 2. Change into the project directory:
