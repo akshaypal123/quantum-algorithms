@@ -1,6 +1,6 @@
 # Quantum Algorithms with Cirq in Python
 
-![Cirq Logo](https://github.com/quantumlib/Cirq/raw/main/docs/Cirq_logo_color.png)
+![Cirq Logo](https://raw.githubusercontent.com/quantumlib/Cirq/main/docs/images/Cirq_logo_color.png)
 
 This repository contains Python implementations of various quantum algorithms using the [Cirq](https://quantumai.google/cirq) library.
 
